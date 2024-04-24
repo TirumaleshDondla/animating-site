@@ -1,0 +1,209 @@
+
+.exercise-containter {
+    width: 100%;
+  }
+  
+  /*Loading animation  */
+  .wrapper.LA01 {
+    height: 100px;
+    position: relative;
+    background: darkred;
+  }
+  .LA01 ul {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    display: flex;
+  }
+  .LA01 ul li {
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: yellow;
+    border-radius: 50%;
+    margin: 0 5px;
+    animation: loadJump 3s linear infinite;
+  }
+
+  @keyframes loadJump {
+    0% {transform: translateY(0);}
+    10% {transform: translateY(0);}
+    25% {transform: translateY(-30px);} 
+    40% {transform: translateY(0px);} 
+    100% {transform: translateY(0px);} 
+  }
+
+  .LA01 ul li:nth-child(1){
+    animation-delay: 0;
+  }
+  .LA01 ul li:nth-child(2){
+    animation-delay: 0.3s;
+  }
+  .LA01 ul li:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  .LA01 ul li:nth-child(4) {
+    animation-delay: 0.9s;
+  }
+  .LA01 ul li:nth-child(5) {
+    animation-delay: 1.2s;
+  }
+
+  /* neon text nt01 */
+  .NT01 {
+    background-color: black;
+    padding: 30px;
+    text-align: center;
+  }
+  .NT01 > div {
+    border: 2px solid #fff;
+    border-radius: 10px;
+    display:inline-block;
+    padding: 10px 20px;
+    box-shadow: 0 0 10px #1eff4e, 0 0 30px #1eff4e, inset 0 0 10px #1eff4e, inset 0 0 30px #1eff4e;
+    animation: glow 2.5s linear infinite;
+    position: relative;
+  }
+  
+  .NT01 > div:before {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    border-bottom: 2px solid white;
+    background: #fff;
+    box-shadow: 0 0 10px #1eff4e, 0 0 30px #1eff4e, inset 0 0 10px #1eff4e, inset 0 0 30px #1eff4e;
+    z-index: -1;
+  }
+  .NT01 > div:after {
+    content: '';
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
+    border-bottom: 2px solid white;
+    background: #fff;
+    box-shadow: 0 0 10px #1eff4e, 0 0 30px #1eff4e, inset 0 0 10px #1eff4e, inset 0 0 30px #1eff4e;
+    z-index: -1;
+  }
+  
+  .NT01 h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    margin: 0;
+    display:inline-block; 
+    text-shadow: 0 0 10px #1eff4e, 0 0 20px #1eff4e, 0 0 80px #1eff4e, 0 0 120px #1eff4e;
+  }
+  
+  .NT01 h1 span {
+    animation: glow 0.4s linear infinite;
+  }
+  .NT01 h1 span:nth-child(1) {
+    animation-delay: .25s;
+  }
+  
+  .NT01 h1 span:nth-child(2), .NT01 h1 span:nth-child(8) {
+    animation-delay: .15s;
+  }
+  
+  .NT01 h1 span:nth-child(3), .NT01 h1 span:nth-child(4), .NT01 h1 span:nth-child(6), .NT01 h1 span:nth-child(7) {
+    animation: none;
+  }
+  
+  .NT01 h1 span:nth-child(5) {
+    animation-delay: .35s;
+  }
+  @keyframes glow {
+    0% {opacity: 1;}
+    30% {opacity: 1;}
+    40% {opacity: 0.5;}
+    50% {opacity: 1;}
+    100% {opacity: 1;}
+  }
+  
+  
+  /* TRANSPPARENT TEXT EFFECT */
+  .TXT01 .box {
+    height: 200px;
+    background: url(https://i.ytimg.com/vi/_bvYhkaINog/maxresdefault.jpg) no-repeat;
+    background-size: cover; 
+    position: relative;
+  }
+  .TXT01 h1{
+    position: absolute;
+    top: 45%;
+  margin: 0;
+  padding: 0;
+  font-size: 60px;
+  font-family: sans-serif;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 0 5px 10px rgba(0,0,0,1);
+  mix-blend-mode: overlay;
+  box-shadow: 0 5px 10px rgba(0,0,0,1);
+  background: rgba(0,0,0,.6);
+  }
+  /* METAL TEXT EFFECT */
+.TXT02 .box {
+    height: 150px;
+    position: relative;
+    background: url(http://www.dq995.com/data/out/29/881120.jpg) no-repeat;
+    background-size: cover;
+  }
+  
+  .TXT02 h1 > span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    font-family: sans-serif;
+    font-style: italic;
+    font-size: 90px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: linear-gradient(#262626, #eaeaea, #262626);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  .TXT02 h1 > span:nth-child(1) {
+    z-index: 2;  
+  }
+  
+  .TXT02 h1 > span:nth-child(2) {
+    z-index: 1;
+    text-shadow: 1px 1px 0 #262626, 2px 2px 0 #262626, 3px 3px 0 #262626, 4px 4px 0 #262626, 5px 5px 0 #262626, 1px 1px 0 #262626, 6px 20px 20px rgba(0,0,0,1);  
+  }
+  /* Typing text animation TXT03 */
+.TXT03 .box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
+  .TXT03 h1 {
+    animation: typing 2s steps(22), blink  infinite alternate; /* steps equals to text lendgth */
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid black;
+  }
+  
+  @keyframes typing {
+    from {width: 0;}
+    to {width: 310px;}
+  }
+  
+  @keyframes blink {
+    from {border-color: transparent;}
+    to {border-color: black;}
+  }
